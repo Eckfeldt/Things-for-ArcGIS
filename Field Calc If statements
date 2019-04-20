@@ -1,0 +1,17 @@
+#This code would seach a field called Comments and look for various substrings. The values "Weak", "Moderate", "High" are returned.
+
+#the following goes into the field = 
+myCalc(!Comments!)
+#!Comments! is the actual field name
+
+#The following goes in the pre-logic script
+def myCalc(comment):
+   if ('W' in comment):
+      return 'Weak'
+   elif ('Mod' in comment):
+      return 'Moderate'
+   elif ('Hig' in comment):
+      return 'High'
+   else:
+      return "failure"
+  #(comment) could be called anything. it is declaring whatever myCalc passes as a variable called comment
