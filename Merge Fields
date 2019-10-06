@@ -1,0 +1,16 @@
+#Python
+#This code would populate a string field using one of many other string fields. The first not blank field it encounters is used.
+
+#the following goes into the field = 
+populate(!ProfileA!,!ProfileB!)
+#ProfileA and ProfileB could be lateritic profile values in A block and B block for example
+
+#The following goes into Pre-Logic Script Code
+
+def populate(ProfA,ProfE):
+   if ProfA.strip():
+      return ProfA
+   elif ProfE.strip():
+      return ProfE
+   else:
+      return ""
